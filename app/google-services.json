@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "960797940604",
+    "firebase_url": "https://e-school-5c597.firebaseio.com",
+    "project_id": "e-school-5c597",
+    "storage_bucket": "e-school-5c597.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960797940604:android:f3a3b17f62edeb63ab22f9",
+        "android_client_info": {
+          "package_name": "com.example.loginsignupmodule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960797940604-mj987kb5a4grjlb0sfa0rfe2kjqhqjr9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFG7N5MlRxAQ9QgBmOTO5rNGTS_2vgAN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960797940604-mj987kb5a4grjlb0sfa0rfe2kjqhqjr9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
