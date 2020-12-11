@@ -4,6 +4,204 @@
     <title>
         Main page
     </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <link href="css\style.css" rel="stylesheet">
+    <script defer src="js\script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 </head>
+
+<body>
+    <!-- Navbar -->
+    <div style="background-image:linear-gradient(to right,#b5446e,#9d44b5,#badefc,#0affed);">
+        <div>
+            <div style="width:100%;overflow:auto;padding-right:20px;">
+                <a href="main.html" style="text-decoration: none;">
+                    <img src="alert.jpg" style="margin:15px;margin-bottom:1px;height:50px;width:50px;">
+                </a>
+                <a href="main.html" style="text-decoration: none;">
+                    <font size=" 20px " color="red " face="lucida calligraphy ">Fit Mind Consultancy</font>
+                </a>
+                <div style="width:30%;float:right;margin-top:30px;text-align:right;" class="options">
+                    <button data-modal-target="#modal">
+                        <font size="5px">Login</font>
+                    </button>
+                    <font size="5px"> / </font>
+                    <button data-modal-target="#modal2">
+                        <font size="5px">Signup</font>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+
+        <div class="modal-body">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="height:70%;padding:20px;">
+                <form class="login100-form validate-form" style="height:100%; padding-top: 15px;">
+                    <span class="login100-form-title p-b-49">
+                    Login
+                </span>
+
+                    <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
+                        <span class="label-input100">Username</span>
+                        <input class="input100" type="text" name="username" placeholder="Type your username">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        <input class="input100" type="password" name="pass" placeholder="Type your password">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+
+                    <div class="text-right p-t-8 p-b-31">
+                        <a href="#">
+                        Forgot password?
+                    </a>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                            Login
+                        </button>
+                        </div>
+                    </div>
+
+                    <div class="txt1 text-center p-t-54 p-b-20">
+                        <span>
+                        Or Sign Up Using
+                    </span>
+                    </div>
+
+                    <div class="flex-c-m">
+                        <a href="#" class="login100-social-item bg1">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg2">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg3">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex-col-c p-t-155" style="padding-top: 15px;">
+                        <span class="txt1 p-b-17">
+                        Or Sign Up Using
+                        </span>
+
+                        <button onclick="openModal2()">
+                            Signup
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" id="modal2">
+        <div class="modal-body">
+            <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54" style="height:100%;padding:20px;">
+                <form class="login100-form validate-form" style="height:100%; padding-top: 15px;">
+                    <span class="login100-form-title p-b-49">
+                            Sign Up
+                    </span>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Full Name</span>
+                        <input class="input100" type="text" name="fullname" placeholder="Full Name">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Contact Number</span>
+                        <input class="input100" type="text" name="number" placeholder="1234567890">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Email Id</span>
+                        <input class="input100" type="text" name="Email" placeholder="example@gmail.com">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Username</span>
+                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Password</span>
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-8" data-validate="Field is necessary">
+                        <span class="label-input100">Re - Enter Password</span>
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                    signup
+                                </button>
+                        </div>
+                    </div>
+
+                    <div class="txt1 text-center p-t-54 p-b-20">
+                        <span>
+                                Or Sign Up Using
+                            </span>
+                    </div>
+
+                    <div class="flex-c-m">
+                        <a href="#" class="login100-social-item bg1">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg2">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+
+                        <a href="#" class="login100-social-item bg3">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+
+                    <div class="flex-col-c p-t-155" style="padding-top: 15px;">
+
+                        <button onclick="openModal()">Already a user</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="overlay"></div>
+</body>
 
 </html>
