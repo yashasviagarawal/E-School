@@ -10,6 +10,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class StudentLoginActivity extends AppCompatActivity {
 
     @Override
@@ -17,9 +21,17 @@ public class StudentLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
 
-        Button login;
+        Button login,dashboard;
         final EditText Email,Password,schoolcode;
         TextView forgotpassword;
+
+        FirebaseAuth firebaseAuth;
+        FirebaseDatabase database;
+        FirebaseUser currentuser;
+
+        forgotpassword = findViewById(R.id.forgotPassword);
+        firebaseAuth=FirebaseAuth.getInstance();
+        currentuser = firebaseAuth.getCurrentUser();
 
         login = findViewById(R.id.login_Button);
         Email = findViewById(R.id.inputEmail);
@@ -30,7 +42,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Email.getText().toString().equals("") ||  Password.getText().toString().equals("")|| schoolcode.getText().toString().equals("")) {
+                /*if (Email.getText().toString().equals("") ||  Password.getText().toString().equals("")|| schoolcode.getText().toString().equals("")) {
                     Toast.makeText(StudentLoginActivity.this,"All Fields are Mandatory !!!",Toast.LENGTH_SHORT).show();
 
 
@@ -40,24 +52,21 @@ public class StudentLoginActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(StudentLoginActivity.this,"Password did not Matched",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(StudentLoginActivity.this,StudentDashboard.class);
+                    startActivity(intent);
 
                     Email.setText("");
                     Password.setText("");
                     schoolcode.setText("");
-                }
-            }
-        });
+                }*/
 
-
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(StudentLoginActivity.this,MainActivity.class);
+                Intent intent = new Intent(StudentLoginActivity.this,StudentDashboard.class);
                 startActivity(intent);
-
             }
         });
+
+
+
+
     }
 }

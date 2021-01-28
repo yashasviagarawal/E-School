@@ -13,7 +13,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    @SuppressLint("WrongViewCast")
+    CardView teacher,student;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,19 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this,"Welcome to Our Application",Toast.LENGTH_SHORT).show();
 
-        CardView admin, teacher, student;
-
-        admin = findViewById(R.id.adminlogin);
         teacher = findViewById(R.id.teacherlogin);
         student = findViewById(R.id.studentlogin);
 
-        admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,AdminLoginActivity.class);
-                startActivity(intent);
-            }
-        });
 
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override

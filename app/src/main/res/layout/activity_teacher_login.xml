@@ -134,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="School Code"
+            android:hint="Schoolname@Eschool"
             android:imeOptions="actionNext"
             android:inputType="text"
             android:paddingStart="50dp"
@@ -182,19 +182,6 @@
             app:layout_constraintTop_toBottomOf="@+id/login_Button"
             tools:layout_editor_absoluteX="40dp" />
 
-        <Button
-            android:id="@+id/new_user_Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/newuser_button_background"
-            android:elevation="50dp"
-            android:text="Creat Account"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
-            tools:layout_editor_absoluteX="40dp"></Button>
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/remember_me"
@@ -206,6 +193,7 @@
             app:layout_constraintBottom_toTopOf="@+id/login_Button"
             app:layout_constraintTop_toBottomOf="@+id/inputSchoolCode"
             ></androidx.appcompat.widget.AppCompatCheckBox>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

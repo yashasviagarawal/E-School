@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Login signup module</string>
+    <string name="app_name">E-school</string>
+    <string name="sub1">Physics</string>
+    <string name="sub2">Biology</string>
+    <string name="sub3">Chemistry</string>
+    <string name="sub4">Maths</string>
+    <string name="sub5">English</string>
+    <string name="sub6">Hindi</string>
+    <string name="sub7">History</string>
+    <string name="sub8">Civics</string>
+    <string name="sub9">Geography</string>
+    <string name="sub10">Economics</string>
 </resources>

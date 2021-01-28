@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.loginsignupmodule">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,9 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminDashboard"></activity>
+        <activity android:name=".ViewFilesActivity"></activity>
+        <activity android:name=".GeographyTeachersActivity" />
+        <activity android:name=".EnglishTeachersActivity" />
+        <activity android:name=".MathsTeachersActivity" />
+        <activity android:name=".ChemistryTeachersActivity" />
+        <activity android:name=".PhysicsTeacherActivity" />
+        <activity android:name=".LiveClassActivity" />
+        <activity android:name=".AssignmentsActivity" />
+        <activity android:name=".HomeWorkActivity" />
+        <activity android:name=".NotesActivity" />
+        <activity android:name=".ClassWorkActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".LibraryActivity" />
+        <activity android:name=".NoticeActivity" />
         <activity android:name=".TeacherDashboard" />
-        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".StudentDashboard" />
         <activity
             android:name=".MainActivity"
@@ -19,23 +42,14 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
             android:name=".StudentLoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
-            android:name=".TeacherRegisterActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity
             android:name=".TeacherLoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity
-            android:name=".AdminRegisterActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity
-            android:name=".AdminLoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
     </application>
 

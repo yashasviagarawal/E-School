@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentLoginActivity">
+    tools:context=".TeacherLoginActivity">
 
     <ImageView
         android:id="@+id/ImageHeader"
@@ -29,10 +29,8 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@id/ImageHeader"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +83,7 @@
             android:id="@+id/inputEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:hint="Email"
             android:imeOptions="actionNext"
             android:inputType="textEmailAddress"
@@ -93,7 +91,8 @@
             android:paddingEnd="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/textWelcome" />
+            app:layout_constraintTop_toBottomOf="@id/textWelcome"
+            tools:layout_editor_absoluteX="30dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -109,7 +108,7 @@
             android:id="@+id/inputPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:hint="Password"
             android:imeOptions="actionNext"
             android:inputType="textPassword"
@@ -117,7 +116,8 @@
             android:paddingEnd="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/inputEmail" />
+            app:layout_constraintTop_toBottomOf="@id/inputEmail"
+            tools:layout_editor_absoluteX="30dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -129,20 +129,20 @@
             app:layout_constraintBottom_toBottomOf="@+id/inputPassword"
             app:layout_constraintStart_toStartOf="@+id/inputPassword"></ImageView>
 
-
         <EditText
             android:id="@+id/inputSchoolCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:hint="School Code"
+            android:layout_marginTop="20dp"
+            android:hint="Schoolname@Eschool"
             android:imeOptions="actionNext"
             android:inputType="text"
             android:paddingStart="50dp"
             android:paddingEnd="10dp"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+            app:layout_constraintTop_toBottomOf="@id/inputPassword"
+            tools:layout_editor_absoluteX="30dp" />
 
         <ImageView
             android:layout_width="30dp"
@@ -159,7 +159,7 @@
             android:id="@+id/login_Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/primary_button_backgound"
             android:elevation="50dp"
             android:text="Login"
@@ -174,14 +174,14 @@
             android:id="@+id/forgotPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
             android:gravity="center"
             android:text="Forgot Password"
             android:textColor="@android:color/black"
             android:textSize="15sp"
-            app:layout_constraintTop_toBottomOf="@+id/login_Button" />
+            app:layout_constraintTop_toBottomOf="@+id/login_Button"
+            tools:layout_editor_absoluteX="40dp" />
+
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/remember_me"
@@ -192,7 +192,8 @@
             android:text="Remember Me"
             app:layout_constraintBottom_toTopOf="@+id/login_Button"
             app:layout_constraintTop_toBottomOf="@+id/inputSchoolCode"
-            tools:layout_editor_absoluteX="30dp"></androidx.appcompat.widget.AppCompatCheckBox>
+            ></androidx.appcompat.widget.AppCompatCheckBox>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

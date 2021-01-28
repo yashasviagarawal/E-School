@@ -1,5 +1,6 @@
 package com.example.loginsignupmodule;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,6 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class TeacherLoginActivity extends AppCompatActivity {
 
     @Override
@@ -17,25 +25,28 @@ public class TeacherLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teacher_login);
 
-        Button newuser,login;
+        Button login;
         final EditText Email,Password,schoolcode;
         TextView forgotpassword;
 
-        newuser = findViewById(R.id.new_user_Button);
+        String schoolname = " ";
+
+        final FirebaseAuth firebaseAuth;
+        FirebaseDatabase database;
+        FirebaseUser currentuser;
+
+        forgotpassword = findViewById(R.id.forgotPassword);
+        firebaseAuth=FirebaseAuth.getInstance();
+        currentuser = firebaseAuth.getCurrentUser();
+
         login = findViewById(R.id.login_Button);
         Email = findViewById(R.id.inputEmail);
         Password = findViewById(R.id.inputPassword);
         forgotpassword = findViewById(R.id.forgotPassword);
         schoolcode = findViewById(R.id.inputSchoolCode);
 
-        newuser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TeacherLoginActivity.this, TeacherRegisterActivity.class);
-                startActivity(intent);
 
-            }
-        });
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,15 +59,36 @@ public class TeacherLoginActivity extends AppCompatActivity {
                     Password.setText("");
                     schoolcode.setText("");
                 }
-                else
-                {
-                    Toast.makeText(TeacherLoginActivity.this,"Password did not Matched",Toast.LENGTH_SHORT).show();
+                else {
 
-                    Email.setText("");
-                    Password.setText("");
-                    schoolcode.setText("");
+                    Intent intent = new Intent(TeacherLoginActivity.this,TeacherDashboard.class);
+                    startActivity(intent);
+
+                    Toast.makeText(TeacherLoginActivity.this,"Login Successfull",Toast.LENGTH_SHORT).show();
+                    /*firebaseAuth.signInWithEmailAndPassword(Email.getText().toString(), Password.getText().toString())
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Intent intent = new Intent(TeacherLoginActivity.this, TeacherDashboard.class);
+                                        startActivity(intent);
+                                        finish();
+                                        Toast.makeText(TeacherLoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else{
+                                        Toast.makeText(TeacherLoginActivity.this, "Login Unsuccessful", Toast.LENGTH_SHORT).show();
+                                        Email.setText("");
+                                        Password.setText("");
+                                        schoolcode.setText("");
+                                    }
+                                }
+                            });*/
+
                 }
             }
         });
+
     }
+
+
 }

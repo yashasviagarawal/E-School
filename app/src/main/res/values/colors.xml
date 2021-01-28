@@ -9,4 +9,6 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorTextPrimary">#212121</color>
     <color name="colorTextHint">#808080</color>
+    <color name="colorOrange">#FFE2B8</color>
+    <color name="background_library_cardview">#66FFB5</color>
 </resources>
